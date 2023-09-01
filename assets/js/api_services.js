@@ -48,9 +48,8 @@ class Persona {
         <span class="circle" data-range="1-5"></span>
         <div class="d-flex">
           <span class="${id}-circle"></span>
-          <h2>Nombre: ${value.charName}</h2>
-          <h2>Estatura: ${value.height} cm</h2>
-          <h2>Peso: ${value.weight} kg</h2>
+          <h2>${value.charName}</h2>
+          <p>Estatura: ${value.height} cm. Peso: ${value.weight} kg</h2>
         </div>
       </div>
       `;
