@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Russo One', sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+	color: #000000;
+
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+	color: #d0a000;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+header {
+	text-align: center;
+}
+
+main {
+	margin-top: 3rem;
+	padding-left: 3rem;
+}
+
+ul {
+	border-left: 4px solid rgb(196, 196, 196);
+	list-style: none;
+	padding-left: 3rem;
+	display: grid;
+	gap: 1.5rem;
+}
+
+li {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+	gap: 0.5rem;
+}
+
+li::after,
+li::before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+li::after {
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: rgb(241, 196, 15);
+	left: calc(-3rem - 0.5rem - 2px);
+}
+
+li::before {
+	content: attr(data-range);
+	left: calc(-3rem - 3rem - 0.5rem - 2px);
+}
+
+.card {
+	padding: 0.5rem;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 0.5rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: .5rem;
+}
+
+.card div:nth-child(2) {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.card h2 {
+	line-height: 90%;
+}
+
+.card .circle {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: rgb(250, 128, 114);
+	border-radius: 100%;
+}
+
+#secundarios .circle {
+	background-color: rgb(114, 238, 144);
+}
+
+#resto .circle {
+	background-color: rgb(135, 206, 250);
+}
+
+.noMore {
+	color: #e71f09;
+	font-weight: bold;
+	text-align: center;
+}
+
+.noMore,
+.card {
+	animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
